@@ -212,7 +212,7 @@
 
     <footer>
       <button
-        onclick="window.location.href='https://github.com/VincentHenon/';"
+        onclick="window.open('https://github.com/VincentHenon/', '_blank')"
         type="button">
         <i class="bi bi-github"></i>
         Mon github
@@ -226,6 +226,8 @@
     <!-- rotate logo based on Y scroll position -->
     <script>window.addEventListener('scroll', function() {
         const rotation = window.scrollY / 10 - 15;
+        // const translate = window.scrollY / 6;
+        //document.querySelector('.logo').style.transform = `translateX(${translate}px) rotate(${rotation}deg)`;
         document.querySelector('.logo').style.transform = `rotate(${rotation}deg)`;
       });</script>
   </body>
