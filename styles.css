@@ -8,7 +8,6 @@
 * {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    color: #0C6E84;
     font-size: 1rem;
     
 }
@@ -46,6 +45,7 @@ header {
     align-items: center;
     justify-content: flex-end;
     box-shadow: 0px 5px 20px rgba(0,0,0,.2);
+    transition: all .3s ease;
 }
 
 .logo {
@@ -202,6 +202,49 @@ h1 {
 .table .row_last.last {
     border-bottom-right-radius: 10px;
 }
+/* arrow handler */
+#back-top {
+    color: rgba(253, 103, 99, .7);
+    z-index: 2;
+    position: sticky;
+    /*bottom: 25px;
+    left: calc(50% - 30px); 50px = <main> margin-left */
+    bottom: 50px;
+    left: 50px;
+    transform: scale(1);
+    transition: all 1s ease;
+}
+
+#back-top:hover {
+    animation: shaker 1s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes shaker {
+    0% {
+        color: rgba(253, 103, 99, .7);
+        transform: scale(1.5) translateY(0);
+    }
+    20% {
+        transform: scale(1.5) translateY(-15px)
+    } 
+    40% {
+        transform: scale(1.5) translateY(15px)
+    }
+    50% {
+        color: rgba(12,110,132,.7);
+    }
+    60% {
+        transform: scale(1.5) translateY(-5px)
+    }
+    80% {
+        transform: scale(1.5) translateY(5px)
+    }
+    100% {
+        color: rgba(253, 103, 99, .7);
+        transform: scale(1.5) translateY(0)
+    }
+}
 
 
 /* Wakelet handler */
@@ -213,7 +256,7 @@ h1 {
 button {
     position: absolute;
     transform-origin: top right;
-    transform: rotate(90deg);
+    transform:  scale(0) rotate(90deg);
     opacity: 0;
     top: 160px;
     left: 100px;
@@ -236,7 +279,7 @@ button {
     transition: all .3s ease;
 }
 
-i {
+.github {
     margin-right: 15px;
     vertical-align: center;
     transform: scale(1.6);
@@ -260,7 +303,7 @@ footer {
     width: 100px;
     height: 100px;
     border-top-left-radius: 100px;
-    background-color: rgba(12,110,132,.8);
+    background-color: rgba(253, 103, 99, .8);
     display: flex;
     align-items: center;
     transform-origin: center;
@@ -272,10 +315,11 @@ footer:hover {
     width: 300px;
     height: 300px;
     border-top-left-radius: 300px;
+    background-color: #0C6E84;
     cursor: pointer;
 }
 footer:hover button {
-    transform: rotate(0deg);
+    transform: scale(1) rotate(0deg);
     opacity: 1;
 }
 
