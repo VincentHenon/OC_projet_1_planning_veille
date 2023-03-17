@@ -212,8 +212,10 @@ h1 {
 
 button {
     position: absolute;
+    transform-origin: top right;
+    transform: rotate(90deg);
     opacity: 0;
-    top: 50%;
+    top: 160px;
     left: 100px;
     margin: 5px auto;
     display: flex;
@@ -273,6 +275,7 @@ footer:hover {
     cursor: pointer;
 }
 footer:hover button {
+    transform: rotate(0deg);
     opacity: 1;
 }
 
