@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -222,6 +222,8 @@
       src="https://embed-assets.wakelet.com/wakelet-embed.js"
       charset="UTF-8"
     ></script>
+
+    <!-- rotate logo based on Y scroll position -->
     <script>window.addEventListener('scroll', function() {
         const rotation = window.scrollY / 10 - 15;
         document.querySelector('.logo').style.transform = `rotate(${rotation}deg)`;
